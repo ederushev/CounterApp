@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    private var counter: Int = 0
+    @IBOutlet weak var counterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func counterButton(_ sender: Any) {
+    counter += 1
+        counterLabel.text = "Значение счётчика: \(counter)"
+    }
 }
 
